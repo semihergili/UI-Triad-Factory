@@ -1,24 +1,26 @@
 # UI Triad Factory (`ergili-ai-design`)
 
-An autonomous **3-Agent UI Replication & Verification Skill** for Antigravity — designed by **Semih Ergili** (`ergili-ai-design`) to turn reference screenshots, annotated mockups, or UI videos into pixel-faithful, full-functional **Electron** desktop and web applications.
+An autonomous **3-Agent UI Replication & Verification Skill** for Antigravity — created by **Semih Ergili** (`ergili-ai-design`) to convert reference UI screenshots, annotated mockups, or screen-recording videos into pixel-faithful, interactive **Electron** desktop and web applications.
 
 ---
 
-## Real Results Showcase (Built with UI Triad Factory)
+## Reference Input vs. Live Electron Output
 
-This repository showcases how the **Analyze → Build → Visual Verify** loop reproduces and blends two distinct desktop interfaces into working Electron applications:
+Each comparison below pairs the **original reference mockup** provided as input on the left with the **live rendered Electron application** autonomously analyzed, built, localized to Turkish, and verified (`96/100` parity) by the 3-agent loop on the right.
 
-### 1. Executive Bento Dashboard (`İyi günler Semih`) + Cansaas Space AI Workspace
+### Case Study 1 — Executive Bento Dashboard ([`atlas-dashboard-copy`](https://github.com/semihergili/atlas-dashboard-copy))
 
-| Executive Bento Dashboard (`İyi günler Semih`) | Cansaas Space — AI Workspace (`Günaydın, Semih`) |
+| Reference Mockup (Input) | Live Electron Output (Built by UI Triad Factory) |
 |---|---|
-| ![Executive Bento Dashboard](./assets/case1_atlas_dashboard.png) | ![Cansaas Space Main](./assets/case2_cansaas_main.png) |
+| ![Atlas Dashboard Reference](./assets/case1_reference.jpg) | ![Atlas Dashboard Output](./assets/case1_atlas_dashboard.png) |
 
-### 2. Interactive Voice Waveform & Multi-Model Popover States
+### Case Study 2 — Cansaas Space AI & Voice Workspace ([`cansaasspace`](https://github.com/semihergili/cansaasspace))
 
-| Live Voice Input Mode | Multi-Model Selector & Temporary Chat |
+| Reference Mockup (Input) | Live Electron Output (Built by UI Triad Factory) |
 |---|---|
-| ![Cansaas Space Voice Mode](./assets/case2_cansaas_voice.png) | ![Cansaas Space Model Popover](./assets/case2_cansaas_models.png) |
+| ![Cansaas Main Reference](./assets/case2_reference_main.webp) | ![Cansaas Main Output](./assets/case2_cansaas_main.png) |
+| ![Cansaas Voice Reference](./assets/case2_reference_voice.webp) | ![Cansaas Voice Output](./assets/case2_cansaas_voice.png) |
+| ![Cansaas Models Reference](./assets/case2_reference_models.png) | ![Cansaas Models Output](./assets/case2_cansaas_models.png) |
 
 ---
 
@@ -54,7 +56,7 @@ Reference Media (Screenshots / Annotated Mockups / Video Keyframes)
 
 ## Installation
 
-Install under your global Antigravity skills folder (`ergili-ai-design`) or inside any project's `.agents/skills/` directory:
+Install the [`skills/ergili-ai-design`](./skills/ergili-ai-design) folder under your global Antigravity skills directory or inside a project's `.agents/skills/` folder:
 
 ### Global Installation (Recommended)
 - **Windows**: `%USERPROFILE%\.gemini\config\skills\ergili-ai-design\`
@@ -73,9 +75,17 @@ Install under your global Antigravity skills folder (`ergili-ai-design`) or insi
 
 ---
 
-## Repository Contents
+## Repository Structure
 
-- [`SKILL.md`](./SKILL.md) — Core skill manifest (`name: ergili-ai-design`) defining the 4-phase orchestration and 1:1 visual parity enforcement loop.
-- [`references/agent-prompts.md`](./references/agent-prompts.md) — Prompt templates for `ui-analyzer`, `app-builder`, `visual-verifier`, plus `ffmpeg` keyframe extraction commands.
-- [`assets/`](./assets/) — Verified Electron screenshots from both built UI systems (`atlas-dashboard-copy` and `cansaasspace`).
-- [`LICENSE`](./LICENSE) — MIT License (`Copyright (c) 2026 Semih Ergili`).
+```text
+UI-Triad-Factory/
+├── assets/                          # Before (reference) & After (Electron output) screenshots
+├── skills/
+│   └── ergili-ai-design/
+│       ├── SKILL.md                 # Core skill manifest (name: ergili-ai-design)
+│       └── references/
+│           └── agent-prompts.md     # 3-agent prompt templates & ffmpeg keyframe extraction
+├── .gitignore
+├── LICENSE                          # MIT License (Copyright (c) 2026 Semih Ergili)
+└── README.md
+```
