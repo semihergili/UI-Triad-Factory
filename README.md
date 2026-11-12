@@ -24,6 +24,25 @@ Each comparison below pairs the **original reference mockup** provided as input 
 
 ---
 
+## Video Motion Comparison (Remotion Showcase)
+
+Full 22-second (`60fps`, `4:3`) UI motion replication — matching every camera pan/zoom, cursor trajectory, hover tooltip, slide-over drawer, and approval toast on the localized **`İyi günler Semih`** dashboard, paired with **custom-synthesized scene-locked stereo audio** (`48kHz`).
+
+| İlk Hali (Reference Video) | Bizim Yaptığımız Hali (Custom Remotion + Audio Output) |
+|---|---|
+| [▶️ Watch Original Reference (`video_reference.mp4`)](./assets/video_reference.mp4) (`16.78 MB`) | [▶️ Watch Turkish Remotion Output (`video_output.mp4`)](./assets/video_output.mp4) (`11.21 MB`) |
+
+<details>
+<summary>Direct Inline Video Previews (GitHub Native Player)</summary>
+
+https://github.com/semihergili/UI-Triad-Factory/raw/main/assets/video_reference.mp4
+
+https://github.com/semihergili/UI-Triad-Factory/raw/main/assets/video_output.mp4
+
+</details>
+
+---
+
 ## How the 3-Agent Pipeline Works
 
 ```text
@@ -79,7 +98,7 @@ Install the [`skills/ergili-ai-design`](./skills/ergili-ai-design) folder under 
 
 ```text
 UI-Triad-Factory/
-├── assets/                          # Before (reference) & After (Electron output) screenshots
+├── assets/                          # Before & after screenshots + Remotion video demos (video_reference.mp4 & video_output.mp4)
 ├── skills/
 │   └── ergili-ai-design/
 │       ├── SKILL.md                 # Core skill manifest (name: ergili-ai-design)
